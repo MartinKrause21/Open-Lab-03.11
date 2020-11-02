@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NUnit.Framework;
+using System;
 
 namespace Open_Lab_03._11
 {
@@ -6,7 +7,17 @@ namespace Open_Lab_03._11
     {
         public bool IsPalindrome(string str)
         {
-            throw new NotImplementedException();
+            int i;
+            bool isPalindrome = true;
+            for ( i = 0; i < (str.Length / 2 + 1); i++)
+            {
+                if (!(str[i] == str[str.Length - i - 1]))
+                {
+                    return false;
+                }
+
+            }
+            return isPalindrome;
         } 
     }
 }
